@@ -65,6 +65,11 @@ p {
     list-style: none;
 }
 
+.section.no-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 /* Header */
 
 .page-header {
@@ -250,10 +255,6 @@ p {
     max-width: 1600px;
     
 }
-
-/* .container.main-hero {
-    padding-top: 200px;
-} */
 
 .hero-title {
     margin-top: 0px;
@@ -586,22 +587,23 @@ p {
 
 /* Особенности About */
 
-.section.no-padding {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.about .list {
-    display: flex;
-}
-
 .about {
     display: flex;
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.section-title {
+.about__container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.about__list {
+    display: flex;
+}
+
+.about__title {
     margin-top: 0;
 
     font-weight: 700;
@@ -611,17 +613,19 @@ p {
     letter-spacing: var(--ls-primary);
 
     color: var(--nav-cl);
+
+    
 }
 
-.about-list .item {
+.about__item {
     width: 270px;
 }
 
-.about-list .item + .item {
+.about__item:not(:first-child) {
     margin-left: 30px;
 }
 
-.about-list .item {
+.about__item {
     display: block;
     content: "";
     
@@ -634,7 +638,7 @@ p {
     margin-bottom: 30px;
 }
 
-.icon-border {
+.about__icon-border {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -648,20 +652,20 @@ p {
 }
 
 
-.about-icon {
+.about__icon {
     display: flex;
     align-items: center;
     color: #188CE8;
 
 }
 
-.about-txt {
+.about__txt {
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 
-.list .about-txt {
+.about__txt {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -671,7 +675,7 @@ p {
     color: var(--nav-cl);
 }
 
-.list .section-txt {
+.about__section {
     margin-top: 0;
     margin-bottom: 0;
 
@@ -688,35 +692,42 @@ p {
     padding-top: 94px;
     padding-bottom: 94px;
     /* outline: 1px solid plum; */
+    justify-content: center;
+    margin: 0 auto;
 }
 
-.work .list {
+.work__list {
     display: flex;
     /* outline: 1px solid paleturquoise; */
 }
 
-.work-list .item + .item {
+.work__item:not(:first-child) {
     margin-left: 30px;
 }
 
-.work .section-title {
+.work__title {
+
+    display: flex;
+    justify-content: center;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 0;
     margin-bottom: 50px;
+    
+    /* outline: 1px solid papayawhip; */
 }
 
 
-.work-list .item {
+.work__item {
     position: relative;
  
 }
 
-.work-thumb .no-gap {
+.work__no-gap {
     display: block;
 }
 
-.work-txt {
+.work__txt {
     position: absolute;
     
     bottom: 0;
@@ -776,6 +787,8 @@ p {
 }
 
 .team .section-title {
+    display: flex;
+    justify-content: center;
     padding-bottom: 0;
     margin-top: 0;
     margin-bottom: 50px;
@@ -865,6 +878,8 @@ p {
 }
 
 .clients .section-title {
+    display: flex;
+    justify-content: center;
     margin-bottom: 50px;
 }
 
