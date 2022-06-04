@@ -77,14 +77,6 @@ p {
 }
 
 .header-logo {
-    margin: 0;
-    padding: 0;
-    
-    /* outline: 2px solid tomato; */
-}
-
-.header-logo {
-    
     text-decoration: none;
     font-family: var(--secondary-font);
     font-weight: 700;
@@ -121,7 +113,7 @@ p {
     margin-left: 0;  
 }
 
-.site-nav__item .current::after {
+.site-nav__item--current::after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -149,7 +141,7 @@ p {
 
 }
 
-.site-nav__link .current {
+.site-nav__link--current {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -1046,8 +1038,6 @@ p {
 
 .footer-logo {
 
-    margin-bottom: 20px;
-
     text-decoration: none;
     font-family: var(--secondary-font);
     font-weight: 700;
@@ -1055,7 +1045,6 @@ p {
     line-height: 1.19;
     letter-spacing: var(--ls-primary);
     color: var(--accent-cl);
-    
 }
 
 .footer-logo__title--white {
